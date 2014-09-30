@@ -1,0 +1,125 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	unsigned long long int rt,er,var=1,asdf=0,qwer=0,yu,qwert=8000000,sum,r,s,t,u,v,w,x,y,z,op,io,ui,q,min,a[10],b[10],c[10],d[10],e[10],f[10],g[10],h[10],i[10],j[10],k[10],l[10],m[10];
+	for(q=0;q<9;q++)
+	{
+		a[q]=pow(2,q);
+		b[q]=pow(3,q);
+		c[q]=pow(5,q);	
+		d[q]=pow(7,q);
+		e[q]=pow(11,q);
+		f[q]=pow(13,q);
+		g[q]=pow(17,q);
+		h[q]=pow(19,q);
+		i[q]=pow(23,q);
+		j[q]=pow(29,q);
+		k[q]=pow(31,q);
+		l[q]=pow(37,q);
+	}
+	min=52331045326680120;
+	for(r=2;r<9;r++)
+	for(s=1;s<6;s++)
+	for(t=1;t<4;t++)
+	for(u=1;u<3;u++)
+	for(v=1;v<3;v++)
+	for(w=0;w<3;w++)
+	for(x=0;x<3;x++)
+	for(y=0;y<3;y++)
+	for(z=0;z<3;z++)
+	for(op=0;op<3;op++)
+	for(io=0;io<3;io++)
+	for(ui=0;ui<3;ui++)
+	for(yu=0;yu<2;yu++)
+	{
+		var=1;
+		if((r>=s)&&(s>=t)&&(t>=u)&&(u>=v)&&(v>=w)&&(w>=x)&&(x>=y)&&(y>=z)&&(z>=op)&&(op>=io)&&(io>=ui)&&(ui>=yu))
+		{
+		qwer++;
+		if((((2*r)+1)*((2*s)+1)*((2*t)+1)*((2*u)+1)*((2*v)+1)*((2*w)+1)*((2*x)+1)*((2*y)+1)*((2*z)+1)*((2*op)+1)*((2*io)+1)*((2*ui)+1)*((2*yu)+1))>=qwert)
+		{
+		asdf++;
+		sum=pow(2,r);
+		sum=sum*pow(3,s);
+		sum=sum*pow(5,t);
+		sum=sum*pow(7,u);	
+		sum=sum*pow(11,v);
+		if(sum<min)
+		{
+			sum=sum*pow(13,w);
+			if(sum<min)
+			{
+				sum=sum*pow(17,x);
+				if(sum<min)
+				{
+					
+					for(rt=2;rt<18;rt++)
+					{
+					if(rt!=0)
+					{
+					er=sum*rt;
+					if(er>min)												
+					{
+					var=0;
+					break;
+					}
+					}
+					}
+					if(var==1)
+					{
+					sum=sum*pow(19,y);
+					if(sum<min)
+					{
+						sum=sum*pow(23,z);
+						if(sum<min)
+						{
+							sum=sum*pow(29,op);
+							if(sum<min)
+							{
+								sum=sum*pow(31,io);
+								if(sum<min)
+								{
+									sum=sum*pow(37,ui);
+									if(sum<min)
+									{
+									for(rt=2;rt<42;rt++)
+									{
+										if(yu!=0)
+										{
+										er=sum*rt;
+										if(er>min)												
+										{
+										var=0;
+										break;
+									}
+									}
+									}
+									if(var==1)
+									{
+									sum=sum*pow(41,yu);	
+									if(sum<min)
+									min=sum;
+									}
+									}
+					
+								}		
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+}
+cout<<min;
+cout<<endl;
+cout<<asdf;
+cout<<endl;
+cout<<qwer;
+cout<<endl;
+}
+
+
